@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Caveat:regular,500,600,700);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Caveat", cursive;
+}
+
+.slider {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider__bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 25%;
+  width: 100vw;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slider__bottom div {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__bottom div h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.slider__top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 75%;
+  width: 100vw;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slider__top div {
+  height: 100%;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.slider__buttons {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 25%;
+  transform: translate(-50%, 50%);
+}
+.slider__buttons .left-btn,
+.slider__buttons .right-btn {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 32px;
+  padding: 10px;
+  display: flex;
+}
+.slider__buttons .left-btn {
+  justify-content: start;
+  align-items: flex-end;
+  border-bottom-left-radius: 50%;
+}
+.slider__buttons .right-btn {
+  justify-content: end;
+  align-items: flex-start;
+  border-top-right-radius: 50%;
+}
